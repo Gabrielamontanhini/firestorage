@@ -39,13 +39,13 @@ export default function MainPage() {
     }
 
     async function uploadImage(uri, fileType) {
-        console.log("amntes do storageputa")
+        console.log("amntes do SÓ DÁ ERRO NO STORAGE SCRR")
         const blob = await blobImage(uri)
 
         const storage = getStorage();
         const storageRef = ref(storage, "Primeira");
         console.log(storageRef)
-        console.log("depois dessa caralha")
+        console.log("depois desso storage, chegou aqui??")
 
 
 
@@ -57,7 +57,7 @@ export default function MainPage() {
                 setProgress(progress.toFixed())
             },
             (error) => {
-                console.log(`ERRO DO CARALHO ${error}`)
+                console.log(`ERRO NO UPLOADIMAGE ${error}`)
             },
             () => {
                 getDownloadURL(uploadImage.snapshot.ref).then(async (downloadURL) => {
